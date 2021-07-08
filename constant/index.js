@@ -30,10 +30,20 @@ const CATEGORY_COVER_PATH = 'public/covers/category'
 
 const KEY = 'LamCVH123!@#'
 
+// Development
+// const db_url = "mongodb://localhost/library-project"
+
+
+// Production
+const db_url = "mongodb://127.0.0.1:27017/library-project"
+
+
+
 module.exports = {
   USERS,
   MESSAGES,
   KEY,
   COVER_PATH,
-  CATEGORY_COVER_PATH
+  CATEGORY_COVER_PATH,
+  db_url
 }

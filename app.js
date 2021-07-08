@@ -7,10 +7,11 @@ import apiRoute from './server/routers/index';
 import acl from './acl/index';
 
 import { handleValidateError, handleNotFoundError } from './server/middleware/handlerError';
+import { db_url } from './constant';
 
 const connetMongoDB = async () => {
     try {
-        await mongoose.connect('mongodb://localhost/library-project',  {useNewUrlParser: true, useUnifiedTopology: true});
+        await mongoose.connect(db_url,  {useNewUrlParser: true, useUnifiedTopology: true});
     } catch (error) {
         console.error('connect MongoDb has error: ' + error);
     }
